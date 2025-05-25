@@ -1,9 +1,17 @@
 package org.younes.springboot;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
 import java.util.List;
 import java.util.Objects;
 
-public class SoftwareEngineer {
+@Entity
+public class SoftwareEngineer { //usually you dont want to return an entity
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
     private String techStack;
